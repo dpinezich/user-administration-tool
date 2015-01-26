@@ -1,0 +1,29 @@
+@(users: List[(Int, String, String, String, String, String, Int, Int, Int)])
+
+@main("Registration") {
+<table>
+    <tr>
+        <th>id</th>
+        <th>username</th>
+        <th>lastname</th>
+        <th>firstname</th>
+        <th>email</th>
+        <th>city</th>
+        <th>country</th>
+        <th>role</th>
+    </tr>
+    @for((id, username, name, firstname, email, password, city_id, country_id, role_id) <- users) {
+        <tr>
+            <td>@id</td>
+            <td>@username</td>
+            <td>@name</td>
+            <td>@firstname</td>
+            <td>@email</td>
+            <td>@city_id</td>
+            <td>@country_id</td>
+            <td>@role_id</td>
+        </tr>
+    }
+</table>
+
+}
